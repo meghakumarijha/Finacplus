@@ -1,0 +1,84 @@
+const { test, expect } = require('@playwright/test');
+
+test.describe.configure({ mode: 'serial' });
+
+test.use({
+    extraHTTPHeaders: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    }
+});
+
+test.describe('ReqRes API Automation', () => {
+    let userId;
+
+    test('Create User', async ({ request }) => {
+
+        const response =await fetch("https://reqres.in/api/register", {
+  method: 'POST',
+  headers: {
+  "x-api-key": process.env.REQRES_API_KEY,
+  "Content-Type": "application/json"
+},
+  body: JSON.stringify({
+  "email": "eve.holt@reqres.in",
+  "password": "pistol"
+})
+});
+
+        // Validate status code
+        const status = response.status;
+        console.log(status," status from first test");
+        const responseBody = await response.json();
+        
+        expect(status).toBe(200);
+        expect(responseBody).toHaveProperty('id');
+        
+        userId = responseBody.id;
+    });
+
+    test('Get Created User Details', async () => {
+        expect(userId).toBeDefined();
+
+        const response = await fetch(`https://reqres.in/api/users/${userId}`, {
+            method: 'GET',
+            headers: {
+                "x-api-key": process.env.REQRES_API_KEY,
+                "Content-Type": "application/json"
+            }
+        });
+
+
+        if (response.status === 200) {
+            const body = await response.json();
+            console.log('User found:', body);
+        } else {
+            console.log(`User ${userId} not found (Expected for ReqRes stateless API)`);
+        }
+    });
+
+    test('Update User', async () => {
+        expect(userId).toBeDefined();
+
+        const response = await fetch("https://reqres.in/api/users/" + userId, {
+            method: 'PUT',
+            headers: {
+                "x-api-key": process.env.REQRES_API_KEY,
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                "name": "morpheus",
+                "job": "zion resident"
+            })
+        });
+
+        const status = response.status;
+        const body = await response.json();
+
+        console.log('Update Status:', status);
+        expect(status).toBe(200);
+        expect(body.name).toBe("morpheus");
+        expect(body.job).toBe("zion resident");
+    });
+});

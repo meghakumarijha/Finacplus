@@ -1,0 +1,3 @@
+Learning JavaScript Design Patterns
+Addy Osmani
+O'Reilly Media

@@ -1,0 +1,181 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - img "adplus-dvertising" [ref=e6] [cursor=pointer]
+    - iframe [ref=e9]:
+      
+  - generic [ref=e10]:
+    - banner [ref=e11]:
+      - link [ref=e12] [cursor=pointer]:
+        - /url: https://demoqa.com
+        - img [ref=e13]
+    - generic [ref=e16]:
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - generic [ref=e22] [cursor=pointer]:
+            - generic [ref=e23]:
+              - img [ref=e25]
+              - text: Elements
+            - img [ref=e30]
+          - list [ref=e35]:
+            - listitem [ref=e36]:
+              - img [ref=e37]
+              - generic [ref=e39]: Text Box
+            - listitem [ref=e40]:
+              - img [ref=e41]
+              - generic [ref=e43]: Check Box
+            - listitem [ref=e44]:
+              - img [ref=e45]
+              - generic [ref=e47]: Radio Button
+            - listitem [ref=e48]:
+              - img [ref=e49]
+              - generic [ref=e51]: Web Tables
+            - listitem [ref=e52]:
+              - img [ref=e53]
+              - generic [ref=e55]: Buttons
+            - listitem [ref=e56]:
+              - img [ref=e57]
+              - generic [ref=e59]: Links
+            - listitem [ref=e60]:
+              - img [ref=e61]
+              - generic [ref=e63]: Broken Links - Images
+            - listitem [ref=e64]:
+              - img [ref=e65]
+              - generic [ref=e67]: Upload and Download
+            - listitem [ref=e68]:
+              - img [ref=e69]
+              - generic [ref=e71]: Dynamic Properties
+        - generic [ref=e72]:
+          - generic [ref=e74] [cursor=pointer]:
+            - generic [ref=e75]:
+              - img [ref=e77]
+              - text: Forms
+            - img [ref=e83]
+          - list [ref=e88]:
+            - listitem [ref=e89]:
+              - img [ref=e90]
+              - generic [ref=e92]: Practice Form
+        - generic [ref=e93]:
+          - generic [ref=e95] [cursor=pointer]:
+            - generic [ref=e96]:
+              - img [ref=e98]
+              - text: Alerts, Frame & Windows
+            - img [ref=e103]
+          - list [ref=e108]:
+            - listitem [ref=e109]:
+              - img [ref=e110]
+              - generic [ref=e112]: Browser Windows
+            - listitem [ref=e113]:
+              - img [ref=e114]
+              - generic [ref=e116]: Alerts
+            - listitem [ref=e117]:
+              - img [ref=e118]
+              - generic [ref=e120]: Frames
+            - listitem [ref=e121]:
+              - img [ref=e122]
+              - generic [ref=e124]: Nested Frames
+            - listitem [ref=e125]:
+              - img [ref=e126]
+              - generic [ref=e128]: Modal Dialogs
+        - generic [ref=e129]:
+          - generic [ref=e131] [cursor=pointer]:
+            - generic [ref=e132]:
+              - img [ref=e134]
+              - text: Widgets
+            - img [ref=e139]
+          - list [ref=e144]:
+            - listitem [ref=e145]:
+              - img [ref=e146]
+              - generic [ref=e148]: Accordian
+            - listitem [ref=e149]:
+              - img [ref=e150]
+              - generic [ref=e152]: Auto Complete
+            - listitem [ref=e153]:
+              - img [ref=e154]
+              - generic [ref=e156]: Date Picker
+            - listitem [ref=e157]:
+              - img [ref=e158]
+              - generic [ref=e160]: Slider
+            - listitem [ref=e161]:
+              - img [ref=e162]
+              - generic [ref=e164]: Progress Bar
+            - listitem [ref=e165]:
+              - img [ref=e166]
+              - generic [ref=e168]: Tabs
+            - listitem [ref=e169]:
+              - img [ref=e170]
+              - generic [ref=e172]: Tool Tips
+            - listitem [ref=e173]:
+              - img [ref=e174]
+              - generic [ref=e176]: Menu
+            - listitem [ref=e177]:
+              - img [ref=e178]
+              - generic [ref=e180]: Select Menu
+        - generic [ref=e181]:
+          - generic [ref=e183] [cursor=pointer]:
+            - generic [ref=e184]:
+              - img [ref=e186]
+              - text: Interactions
+            - img [ref=e191]
+          - list [ref=e196]:
+            - listitem [ref=e197]:
+              - img [ref=e198]
+              - generic [ref=e200]: Sortable
+            - listitem [ref=e201]:
+              - img [ref=e202]
+              - generic [ref=e204]: Selectable
+            - listitem [ref=e205]:
+              - img [ref=e206]
+              - generic [ref=e208]: Resizable
+            - listitem [ref=e209]:
+              - img [ref=e210]
+              - generic [ref=e212]: Droppable
+            - listitem [ref=e213]:
+              - img [ref=e214]
+              - generic [ref=e216]: Dragabble
+        - generic [ref=e217]:
+          - generic [ref=e219] [cursor=pointer]:
+            - generic [ref=e220]:
+              - img [ref=e222]
+              - text: Book Store Application
+            - img [ref=e227]
+          - list [ref=e232]:
+            - listitem [ref=e233]:
+              - img [ref=e234]
+              - generic [ref=e236]: Login
+            - listitem [ref=e237]:
+              - img [ref=e238]
+              - generic [ref=e240]: Book Store
+            - listitem [ref=e241]:
+              - img [ref=e242]
+              - generic [ref=e244]: Profile
+            - listitem [ref=e245]:
+              - img [ref=e246]
+              - generic [ref=e248]: Book Store API
+      - generic [ref=e249]:
+        - generic [ref=e250]:
+          - heading "Login" [level=1] [ref=e251]
+          - generic [ref=e252]:
+            - generic [ref=e253]:
+              - heading "Welcome," [level=2] [ref=e254]
+              - heading "Login in Book Store" [level=5] [ref=e255]
+            - generic [ref=e256]:
+              - generic [ref=e257]: "UserName :"
+              - textbox "UserName" [ref=e259]: test
+            - generic [ref=e260]:
+              - generic [ref=e261]: "Password :"
+              - textbox "Password" [active] [ref=e263]: Test@123
+            - generic [ref=e264]:
+              - button "Login" [ref=e266]
+              - button "New User" [ref=e268]
+        - iframe [ref=e272]:
+          
+      - generic [ref=e277]:
+        - img "Build PlayWright tests with AI" [ref=e279] [cursor=pointer]
+        - iframe [ref=e282]:
+          
+    - contentinfo [ref=e283]:
+      - generic [ref=e284]: © 2013-2020 TOOLSQA.COM | ALL RIGHTS RESERVED.
+```
