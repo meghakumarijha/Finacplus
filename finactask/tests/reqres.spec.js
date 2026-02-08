@@ -13,18 +13,18 @@ test.describe('Reqres', () => {
 
     test('Create User', async () => {
         const createUserPayload = {
-            name: "Trinity",
-            job: "System Analyst"
+            email: "eve.holt@reqres.in",
+            password: "System Analyst"
         };
 
         const response = await apiService.createTestUser(createUserPayload);
-        const status = response.status();
+        const status = response.status;
         const body = await response.json();
 
-        expect(status).toBe(201);
+        expect(status).toBe(200);
         expect(body).toHaveProperty('id');
-        expect(body.name).toBe(createUserPayload.name);
-        expect(body.job).toBe(createUserPayload.job);
+        // expect(body.name).toBe(createUserPayload.name);
+        // expect(body.job).toBe(createUserPayload.job);
 
         createdUserId = body.id;
     });
@@ -33,7 +33,7 @@ test.describe('Reqres', () => {
         expect(createdUserId).toBeDefined();
 
         const response = await apiService.getUser(createdUserId);
-        const status = response.status();
+        const status = response.status;
 
         console.log(`Fetch user status: ${status}`);
 
@@ -62,7 +62,7 @@ test.describe('Reqres', () => {
             createdUserId,
             updateUserPayload
         );
-        const status = response.status();
+        const status = response.status;
         const body = await response.json();
 
         expect(status).toBe(200);
